@@ -1,0 +1,50 @@
+{
+    "Components": {
+        "mcal_adc": {
+            "Name": "mcal_adc",
+            "git": "https://github.com/ML-ES-Platform/mcal_adc.git",
+            "Path": "ESW/mcal_adc/",
+            "Groups": {
+                "mcal_adc": {
+                    "Name": "mcal_adc",
+                    "NameSpace": "mcal_adc",
+                    "Multiplicity": "0-*",
+                    "Push": [
+                        "ADC_ReadChannel"
+                    ],
+                    "Pull": [],
+                    "Dependencies": [
+                        "mcal_adc"
+                    ],
+                    "Channels": {
+                        "Multiplicity": "1-16",
+                        "NameSpace": "MCAL_ADC"
+                    },
+                    "Defines": {
+                        "PCA9685_PWM_FREQ": 50
+                    }
+                },
+                "mcal_adc_pin": {
+                    "Name": "mcal_adc_pin",
+                    "NameSpace": "mcal_adc_pin",
+                    "Multiplicity": "1",
+                    "Push": [],
+                    "Pull": [],
+                    "Dependencies": [
+                        "mcal_adc"
+                    ],
+                    "Channels": {
+                        "Multiplicity": "10",
+                        "NameSpace": "ADC_PIN",
+                        "Link":{
+                            "ADC_1": "A3",
+                            "ADC_2": "A4",
+                            "ADC_3": "A5"
+                        }
+                    },
+                    "Defines": {}
+                }
+            }
+        }
+    }
+}
