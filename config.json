@@ -1,45 +1,40 @@
 {
     "Components": {
         "mcal_adc": {
-            "Name": "mcal_adc",
             "git": "https://github.com/ML-ES-Platform/mcal_adc.git",
             "Path": "ESW/mcal_adc/",
             "Groups": {
                 "mcal_adc": {
-                    "Name": "mcal_adc",
                     "NameSpace": "mcal_adc",
                     "Multiplicity": "0-*",
                     "Push": [
                         "ADC_ReadChannel"
                     ],
                     "Pull": [],
-                    "Dependencies": [
-                        "mcal_adc"
+                    "Dependency": [
+                        "MCU_IO"
                     ],
                     "Channels": {
                         "Multiplicity": "1-16",
                         "NameSpace": "MCAL_ADC"
                     },
-                    "Defines": {
-                        "PCA9685_PWM_FREQ": 50
-                    }
+                    "Defines": {}
                 },
                 "mcal_adc_pin": {
-                    "Name": "mcal_adc_pin",
-                    "NameSpace": "mcal_adc_pin",
+                    "NameSpace": "null",
                     "Multiplicity": "1",
                     "Push": [],
                     "Pull": [],
-                    "Dependencies": [
-                        "mcal_adc"
+                    "Dependency": [
+                        "null"
                     ],
                     "Channels": {
-                        "Multiplicity": "10",
-                        "NameSpace": "ADC_PIN",
-                        "Link":{
-                            "ADC_1": "A3",
-                            "ADC_2": "A4",
-                            "ADC_3": "A5"
+                        "Multiplicity": "null",
+                        "NameSpace": "null",
+                        "Names": {
+                            "A1": "A3",
+                            "A2": "A4",
+                            "A5": "A5"
                         }
                     },
                     "Defines": {}
