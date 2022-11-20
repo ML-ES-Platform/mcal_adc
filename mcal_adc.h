@@ -11,8 +11,10 @@
 #include "mcal_adc_cfg.h"
 
 
+
+
 #ifndef MCAL_ADC_CONFIG
-enum MCAL_ADC_IdType { MCAL_ADC_CHANNEL_NR_OF = 0};
+enum MCAL_ADC_Cnl_IdType { MCAL_ADC_CHANNEL_NR_OF = 0};
 #endif
 
 

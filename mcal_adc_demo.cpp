@@ -28,7 +28,7 @@ void mcal_adc_demo_setup() {
 // The loop function is called in an endless loop
 void mcal_adc_demo_loop() {
 //Add your repeated code here
-	for (int i = 0; i < MCAL_ADC_CHANNEL_NR_OF; i++) {
+	for (int i = 0; i < MCU_ADC_PIN_CHANNEL_NR_OF; i++) {
 
 		Std_RawDataType adcVal = ADC_ReadChannel(i);
 		Serial.print(" : ");

@@ -8,9 +8,9 @@
 #include "mcal_adc.h"
 
 #ifdef PLATFORM_CONFIG_ENABLE
-extern ADC_ChannelType ADC_Channels[MCAL_ADC_CHANNEL_NR_OF];
+extern ADC_ChannelType ADC_Channels[MCU_ADC_PIN_CHANNEL_NR_OF];
 #else
-ADC_ChannelType ADC_Channels[MCAL_ADC_CHANNEL_NR_OF];
+ADC_ChannelType ADC_Channels[MCU_ADC_PIN_CHANNEL_NR_OF];
 #endif
 /**
  * @brief 
@@ -35,7 +35,7 @@ Std_ReturnType ADC_GroupSetup(Std_ChannelIdType *srcIds, Std_ChannelIdType *targ
 Std_ReturnType MCAL_ADC_ChannelSetup(Std_ChannelIdType channelId, Std_ChannelIdType adc_pin)
 {
 	Std_ReturnType error;
-	if (channelId < MCAL_ADC_CHANNEL_NR_OF)
+	if (channelId < MCU_ADC_PIN_CHANNEL_NR_OF)
 	{
 		ADC_ChannelType *channelRef = ADC_GetChannelRef(channelId);
 		channelRef->adc_pin = adc_pin;
